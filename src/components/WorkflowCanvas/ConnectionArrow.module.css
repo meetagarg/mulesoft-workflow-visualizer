@@ -1,0 +1,56 @@
+.arrowContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--z-arrows);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.arrowPath {
+  stroke: currentColor;
+  stroke-width: 0.3;
+  stroke-dasharray: 2 1;
+  transition: stroke var(--transition-medium), stroke-width var(--transition-medium);
+  vector-effect: non-scaling-stroke;
+}
+
+.arrowContainer.active {
+  color: var(--color-authoring);
+}
+
+.arrowContainer.active .arrowPath {
+  stroke-width: 0.5;
+  stroke-dasharray: 3 1.5;
+  animation: flowAnimation 2s linear infinite;
+}
+
+@keyframes flowAnimation {
+  to {
+    stroke-dashoffset: -4.5;
+  }
+}
+
+.arrowContainer.feedback {
+  color: var(--color-maintenance);
+}
+
+.arrowContainer.feedback .arrowPath {
+  stroke-dasharray: 1.5 1.5;
+}
+
+.arrowContainer.sideOutput {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.arrowContainer.sideOutput .arrowPath {
+  stroke-width: 0.2;
+  stroke-dasharray: 1 1;
+}
+
+.pulseDot {
+  fill: var(--color-authoring);
+  filter: drop-shadow(0 0 2px var(--color-authoring));
+}

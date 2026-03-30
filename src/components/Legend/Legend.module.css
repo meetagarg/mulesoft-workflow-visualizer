@@ -1,0 +1,39 @@
+.legend {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: var(--space-md);
+  background: rgba(22, 33, 62, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  z-index: var(--z-controls);
+  min-width: 180px;
+}
+
+.title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.line {
+  width: 30px;
+  height: 0;
+  border-top: 2px solid;
+}

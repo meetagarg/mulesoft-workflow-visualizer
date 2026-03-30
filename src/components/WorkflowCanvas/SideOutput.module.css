@@ -1,0 +1,56 @@
+.sideOutput {
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: var(--space-sm);
+  background: rgba(22, 33, 62, 0.7);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--output-color);
+  border-radius: 6px;
+  z-index: var(--z-nodes);
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.8s ease 0.6s forwards;
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--output-color);
+}
+
+.icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--output-color);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 8px;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
